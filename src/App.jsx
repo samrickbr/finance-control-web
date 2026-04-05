@@ -1,7 +1,16 @@
-import Login from './pages/Login';
+import { Routes, Route, Navigate } from 'react-router-dom'
+import Login from './pages/Login'
+import Dashboard from './pages/Dashboard'
 
 function App() {
-  return <Login />;
+  return (
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/dashboard" element={<Dashboard />} /> {/* Substitua aqui */}
+      {/* Se o usuário digitar qualquer coisa errada, volta pro login */}
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
+  )
 }
 
-export default App;
+export default App

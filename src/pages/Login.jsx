@@ -1,9 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import api from '../services/api';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -11,6 +13,7 @@ function Login() {
       const response = await api.post('/login', { email, senha: password }); // Enviando 'senha' para o Java
       localStorage.setItem('token', response.data.token); // Guardando o JWT
       alert("Login efetuado com sucesso!");
+      navigate('/dashboard');
     } catch (error) {
       console.error("Erro no login:", error);
       alert("Erro ao conectar com o backend Java.");

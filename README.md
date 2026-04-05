@@ -67,7 +67,7 @@ Antes de começar, você vai precisar ter instalado:
 
 Desenvolvedor Backend Java
 
-🔗 Meu GitHub: https://github.com/samrickbr
+🔗 Meu GitHub: [SAMRICKBR] (https://github.com/samrickbr)
 
 ---
 
