@@ -18,10 +18,10 @@ Interface web para o sistema de controle financeiro pessoal, consumindo a API de
 - [x] Setup do Projeto: Inicialização com Vite e Tailwind v4.
 - [x] Tela de Login: Interface construída e integrada ao Axios.
 - [x] Autenticação JWT: Login integrado ao Spring Security.
-- [ ] Dashboard Principal: Cards de resumo financeiro.
-- [ ] Configuração de Rotas: Implementação do React Router.
-- [ ] Integração de Extrato: Consumo do endpoint de lançamentos do Java.
-- [ ] Dashboard de Gastos e Entradas
+- [x] Dashboard Principal: Cards de resumo financeiro.
+- [x] Configuração de Rotas: Implementação do React Router.
+- [x] Integração de Extrato: Consumo do endpoint de lançamentos do Java.
+- [x] Dashboard de Gastos e Entradas
 - [ ] Listagem de Transações (Consumindo Postgres)
 - [ ] Cadastro de novas movimentações
 - [ ] Cadastro de novos usuários

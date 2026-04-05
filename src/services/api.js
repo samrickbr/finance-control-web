@@ -9,4 +9,19 @@ const api = axios.create({
   }
 });
 
+//adicionar o token automaticamente a cada requisição
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem('token');
+  
+  // Só adiciona se o token existir e não for uma rota de login
+  if (token && !config.url.includes('login')) {
+    config.headers.Authorization = `Bearer ${token}`;
+    console.log("Token enviado na requisição!");
+  }
+  
+  return config;
+}, (error) => {
+  return Promise.reject(error);
+});
+
 export default api;
