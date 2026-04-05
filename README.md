@@ -1,16 +1,60 @@
-# React + Vite
+# Finance Control - Web 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interface web para o sistema de controle financeiro pessoal, consumindo a API desenvolvida em Java/Spring Boot.
 
-Currently, two official plugins are available:
+## 🛠 Tecnologias
+- **React.js 19** (Frontend)
+- **Vite** (Build Tool)
+- **Axios** (Integração com API REST)
+- **React Router Dom** (Gerenciamento de rotas)
+- **Node.js** (Ambiente de execução)
+- **Tailwind CSS v4** (Estilização)
+- **Spring Security**
+- **Backend** (Java com Spring Boot e Mysql)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 Funcionalidades & Progresso (Roadmap)
+- [x] Setup do Projeto: Inicialização com Vite e Tailwind v4.
+- [x] Tela de Login: Interface construída e integrada ao Axios.
+- [x] Autenticação JWT: Login integrado ao Spring Security.
+- [ ] Dashboard Principal: Cards de resumo financeiro.
+- [ ] Configuração de Rotas: Implementação do React Router.
+- [ ] Integração de Extrato: Consumo do endpoint de lançamentos do Java.
+- [ ] Dashboard de Gastos e Entradas
+- [ ] Listagem de Transações (Consumindo Postgres)
+- [ ] Cadastro de novas movimentações
+- [ ] Cadastro de novos usuários
+- [ ] Autenticação com JWT (Integrado ao Spring Security)
 
-## React Compiler
+## ⚙️ Pré-requisitos
+Antes de começar, você vai precisar ter instalado:
+- [Node.js](https://nodejs.org/en/) (Versão LTS)
+- Backend [Finance Control](https://github.com/samrickbr/financeControl.git) rodando localmente
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🔧 Como rodar o projeto
+1. Clone este repositório:
+   ```bash
+   git clone [https://github.com/samrickbr/finance-control-web.git](https://github.com/samrick/finance-control-web.git)
+   
+2. INstale as dependências:
+    ```bash
+   npm install
 
-## Expanding the ESLint configuration
+3. Configure o arquivo de API ('src/services/api.js') para apontar para o seu endereço local.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. Inicie o servidor de desenvolvimento:
+    ```bash
+    npm run dev
+
+5. Acesse: `http://localhost:5173`
+
+---
+## 👨‍💻 Autor
+
+### Rick (Ricardo)
+
+Desenvolvedor Backend Java 
+
+🔗 Meu GitHub: https://github.com/samrickbr
+
+---
+🚀 Projeto em evolução contínua.
