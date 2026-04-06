@@ -22,9 +22,7 @@ function Dashboard() {
       try {
         setLoading(true);
 
-        const response = await api.get(`/relatorios/mensal?mes=${mes}&ano=${ano}`);
-        console.log("dados que vieram do java:", response.data);
-        
+        const response = await api.get(`/relatorios/mensal?mes=${mes}&ano=${ano}`);        
         setDados({
           saldo: response.data.saldoFinal || 0,
           entradas: response.data.totalEntradas || 0,
@@ -40,10 +38,10 @@ function Dashboard() {
     buscarDados();
   }, [mes, ano]);
 
-  if (loading) return <div className="min-h-screen bg-slate-900 text-white p-10">Carregando dados do sistema...</div>;
+  if (loading) return <div className="m bg-slate-900 text-white p-10">Carregando dados do sistema...</div>;
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white p-4 md:p-8">
+    <div className=" bg-slate-900 text-white p-4 md:p-8">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl font-bold mb-8 text-slate-100">Resumo Financeiro</h1>
 

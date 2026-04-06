@@ -1,16 +1,43 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
-import Login from './pages/Login'
-import Dashboard from './pages/Dashboard'
+import { Routes, Route, Navigate } from "react-router-dom";
+import Login from "./pages/Login";
+import Usuarios from "./pages/Usuarios";
+import Dashboard from "./pages/Dashboard";
+import Layout from "./components/Layout"; // Use o Layout que criamos
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
     <Routes>
+      {/* Rota Pública */}
       <Route path="/" element={<Login />} />
-      <Route path="/dashboard" element={<Dashboard />} /> {/* Substitua aqui */}
-      {/* Se o usuário digitar qualquer coisa errada, volta pro login */}
-      <Route path="*" element={<Navigate to="/" />} />
+
+      {/* ROTAS PROTEGIDAS */}
+      <Route
+        path="/usuarios"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <Usuarios />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <Dashboard />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+
+      {/* Redirecionar qualquer rota desconhecida */}
+      <Route path="*" element={<Navigate to="/dashboard" />} />
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;
