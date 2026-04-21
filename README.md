@@ -1,47 +1,43 @@
 # Finance Control - Web 🚀
 
-Interface web moderna para o sistema de controle financeiro pessoal, consumindo a API desenvolvida em Java/Spring Boot.
+Interface web moderna para o sistema de controle financeiro pessoal, consumindo a API desenvolvida em Java/Spring Boot. O foco deste projeto é a gestão eficiente de lançamentos financeiros com uma experiência de usuário (UX) fluida e intuitiva.
 
 ## 🛠 Tecnologias
 
-- **React.js 19** (Frontend)
-- **Vite** (Build Tool)
-- **Axios** (Integração com API REST)
-- **React Router Dom** (Gerenciamento de rotas)
-- **Node.js** (Ambiente de execução)
-- **Tailwind CSS v4** (Estilização)
-- ***Lucide React** (Ícones dinâmicos)
-- **Backend** (Java com Spring Boot e Mysql)
+- **React.js 19** & **Vite**
+- **Tailwind CSS v4** (Estilização moderna e responsiva)
+- **Axios** (Comunicação com API REST)
+- **Lucide React** (Ícones)
+- **React Router Dom** (Navegação)
 
-## 📌 Funcionalidades & Progresso (Roadmap)
+## 📌 Funcionalidades Implementadas
 
-- [x] Setup do Projeto: Inicialização com Vite e Tailwind v4.
-- [x] Tela de Login: Interface construída e integrada ao Axios.
-- [x] Autenticação JWT: Login integrado ao Spring Security com armazenamento de sessão.
-- [x] Gestão de Usuários (CRUD Completo):
-    - [x] Cadastro de novos usuários (com validação de CPF e senha criptografada).
-    - [x] Edição de perfil com controle de permissões (ADMIN/COMUM).
-    - [x] Vínculos dinâmicos (Multiselection) consumindo Enums do Backend.
-    - [x] **Soft Delete**: Desativação de usuários com exigência de justificativa técnica.
-- [x] Dashboard Principal: Cards de resumo financeiro e visão geral.
-- [x] Configuração de Rotas: Implementação do React Router.
-- [x] Integração de Extrato: Consumo dinâmico de lançamentos.
-- [x] Dashboard de Gastos e Entradas
-- [ ] **Cadastro de Movimentações**: Tela para novos lançamentos financeiros.
-- [ ] Cadastro de novas movimentações
+### 👤 Gestão de Usuários (Admin)
+- **CRUD Completo**: Cadastro, listagem e edição de usuários.
+- **Segurança**: Integração com Spring Security e validação de CPF.
+- **Controle de Acesso**: Diferenciação entre perfis ADMIN e COMUM.
+- **Soft Delete**: Sistema de desativação de contas com obrigatoriedade de justificativa técnica.
+
+### 📄 Extrato e Movimentações
+- **Visualização Dinâmica**: Listagem de lançamentos com layout adaptável (Wide).
+- **Filtros Inteligentes**: Busca por descrição e filtragem por tipo (Receita/Despesa).
+- **Tratamento de Dados**: Integração robusta com o Backend para exibição de categorias, tratando estados nulos ou objetos complexos.
+- **Status Visual**: Indicadores coloridos para entradas (verde) e saídas (vermelho).
+
+### 📊 Dashboard & Autenticação
+- **Autenticação JWT**: Fluxo seguro de login com armazenamento de sessão.
+- **Resumo Financeiro**: Cards informativos com saldo, total de receitas e despesas.
 
 ## ⚙️ Pré-requisitos
 
-Antes de começar, você vai precisar ter instalado:
-
-- [Node.js](https://nodejs.org/en/) (Versão LTS)
-- Backend [Finance Control](https://github.com/samrickbr/financeControl.git) rodando localmente
+- **Node.js** (LTS)
+- **Backend Finance Control** rodando (Java 17+ / Spring Boot 3)
 
 ## 🔧 Como rodar o projeto
 
-1. Clone este repositório:
+1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/samrickbr/finance-control-web.git](https://github.com/samrick/finance-control-web.git)
+   git clone [https://github.com/samrickbr/finance-control-web.git](https://github.com/samrickbr/finance-control-web.git)
 
    ```
 2. INstale as dependências:
@@ -63,6 +59,11 @@ Antes de começar, você vai precisar ter instalado:
 5. Acesse: `http://localhost:5173`
 
 ---
+
+Desenvolvido como parte do ecossistema Finance Control.
+
+---
+
 
 ## 👨‍💻 Autor
 

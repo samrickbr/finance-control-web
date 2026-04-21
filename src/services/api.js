@@ -9,19 +9,32 @@ const api = axios.create({
   }
 });
 
-//adicionar o token automaticamente a cada requisição
+// 1. Interceptor de Requisição (Continua igual, adiciona o token)
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
-  
-  // Só adiciona se o token existir e não for uma rota de login
   if (token && !config.url.includes('login')) {
     config.headers.Authorization = `Bearer ${token}`;
-    console.log("Token enviado na requisição!");
   }
-  
   return config;
-}, (error) => {
-  return Promise.reject(error);
-});
+}, (error) => Promise.reject(error));
+
+// 2. NOVO: Interceptor de Resposta (Trata o token expirado)
+api.interceptors.response.use(
+  (response) => response, // Se a resposta for OK (200), só passa adiante
+  (error) => {
+    // Se o erro for 401, o token provavelmente expirou
+    if (error.response && error.response.status === 401) {
+      console.warn("Sessão expirada. Redirecionando para o login...");
+      
+      // Limpa os dados de sessão
+      localStorage.removeItem('token');
+      localStorage.removeItem('usuarioLogado');
+      
+      // Redireciona para o login (forçando o refresh da página)
+      window.location.href = '/login'; 
+    }
+    return Promise.reject(error);
+  }
+);
 
 export default api;

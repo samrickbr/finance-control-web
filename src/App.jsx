@@ -4,6 +4,8 @@ import Usuarios from "./pages/Usuarios";
 import Dashboard from "./pages/Dashboard";
 import Layout from "./components/Layout"; // Use o Layout que criamos
 import ProtectedRoute from "./components/ProtectedRoute";
+import Lancamentos from "./pages/Lancamentos";
+import ListagemLancamentos from "./pages/ListagemLancamentos";
 
 function App() {
   return (
@@ -29,6 +31,28 @@ function App() {
           <ProtectedRoute>
             <Layout>
               <Dashboard />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/lancamentos"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <Lancamentos />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/extrato"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <ListagemLancamentos />
             </Layout>
           </ProtectedRoute>
         }
