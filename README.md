@@ -28,6 +28,17 @@ Interface web moderna para o sistema de controle financeiro pessoal, consumindo 
 - **Autenticação JWT**: Fluxo seguro de login com armazenamento de sessão.
 - **Resumo Financeiro**: Cards informativos com saldo, total de receitas e despesas.
 
+---
+## 🚀 Roadmap / Próximos Passos
+O *Finance Control* está em constante evolução. As próximas implementações previstas incluem:
+
+- [ ] **Relatórios Avançados**: Gráficos de pizza e barras para análise de gastos mensais.
+- [ ] **Exportação de Dados**: Funcionalidade para gerar extratos em PDF/Excel.
+- [ ] **Automação de Lançamentos**: Sistema de recorrência para contas fixas.
+- [ ] **Dark Mode Aprimorado**: Ajustes finos na interface para melhor contraste.
+
+---
+
 ## ⚙️ Pré-requisitos
 
 - **Node.js** (LTS)
@@ -60,7 +71,7 @@ Interface web moderna para o sistema de controle financeiro pessoal, consumindo 
 
 ---
 
-Desenvolvido como parte do ecossistema Finance Control.
+Desenvolvido como parte do ecossistema [Finance Control]((https://github.com/samrickbr)/financeControl)
 
 ---
 
@@ -75,4 +86,4 @@ Desenvolvedor Backend Java
 
 ---
 
-🚀 Projeto em evolução contínua.
+🚀 *Projeto em evolução contínua.*
